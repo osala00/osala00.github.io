@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Centering Continued</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style media="screen">
+        .top {
+            height: 75px;
+            max-height: 75px;
+            min-height: 75px;
+        }
+
+        .firstText h1 {
+            height: 100px;
+            max-height: 100px;
+            min-height: 100px;
+            text-align: center;
+            font-size: 72px;
+            weight: bold;
+            color: white;
+        }
+
+        .secondText {
+            height: 100px;
+            max-height: 100px;
+            min-height: 100px;
+        }
+
+        .secondText img {
+            height: 75;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .middleTop {
+            height: 200px;
+            max-height: 200px;
+            min-height: 200px;
+        }
+
+        .middleMiddle {
+            height: 200px;
+            max-height: 200px;
+            min-height: 200px;
+        }
+
+        .middleBottom {
+            height: 200px;
+            max-height: 200px;
+            min-height: 200px;
+        }
+
+        #pic1 {
+            padding-top: 3%;
+            padding-left: 25%;
+        }
+
+        #pic2 {
+            padding-top: 3%;
+            padding-left: 3%;
+        }
+
+        #pic3 {
+            padding-top: 3%;
+            padding-left: 6%;
+        }
+
+        #pic4 {
+            padding-top: 10%;
+            padding-left: 30%;
+        }
+
+        p {
+            text-align: center;
+            padding-top: 3%;
+        }
+
+        .relativeParent {
+            position: relative;
+        }
+
+        .relativeParent img {
+            position: absolute;
+            top: 20%;
+            left: 33%;
+            transform: translate(-20% -50%);
+        }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="portfolio">
+    <div id="main" class="container">
+        <div class="row">
+            <div class="col-md-3 randomColor top">
+            </div>
+            <div class="col-md-6 randomColor top">
+            </div>
+            <div class="col-md-1 randomColor top">
+            </div>
+            <div class="col-md-1 randomColor top">
+            </div>
+            <div class="col-md-1 randomColor top">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 randomColor firstText">
+                <h1>
+                    西塞罗于公元前年著
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 randomColor secondText">
+                <img src="images/pinkStar.png" alt="pink" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 randomColor middleTop">
+                <img id="pic1" src="images/beer.jpg" alt="beer" />
+            </div>
+            <div class="col-md-4 randomColor middleTop">
+                <img id="pic2" src="images/margarita.png" alt="margarita" />
+                <img id="pic3" src="images/wine.jpg" alt="wine" />
+            </div>
+            <div class="col-md-4 randomColor middleTop ">
+                <img id="pic4" src="images/smiley.png" alt="pic4" />
+                <p>
+                    Excepteur sint occaecat cupidatat non proident.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 randomColor middleMiddle relativeParent">
+                <img src="images/heart.jpg" alt="heart" />
+            </div>
+            <div class="col-md-4 randomColor middleMiddle">
+            </div>
+            <div class="col-md-4 randomColor middleMiddle">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 randomColor middleBottom">
+            </div>
+            <div class="col-md-4 randomColor middleBottom">
+            </div>
+            <div class="col-md-4 randomColor middleBottom">
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * max + min);
+        }
+
+        $(document).ready(function() {
+
+            var bodyColumns = $(".randomColor");
+
+            bodyColumns.each(function() {
+
+                $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+            })
+
+            $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+
+        })
+    </script>
+</body>
+
+</html>
