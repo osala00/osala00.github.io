@@ -53,32 +53,32 @@
         //myArray[2];  4
         //var sum = 0;
         $(document).ready(function() {
-                    //for (var i = 0; i < myArray.length; i = i + 1) {
-                    //var myMessage = "The value in myArray at spot " + i + " is " + myArray[i];
-                    //sum = sum + myArray[i];
-                    //console.log(myMessage);
-                    //$("body").append("<div>" + myMessage + "</div>");
-                    //}
-                    //$("body").append("<div>The total is " + sum + "</div>");
+                    for (var i = 0; i < myArray.length; i = i + 1) {
+                    var myMessage = "The value in myArray at spot " + i + " is " + myArray[i];
+                    sum = sum + myArray[i];
+                    console.log(myMessage);
+                    $("body").append("<div>" + myMessage + "</div>");
+                    }
+                    $("body").append("<div>The total is " + sum + "</div>");
                     //* asterix sign is the sign for multiplication
 
-                    //var sum = 0;
-                    //$(document).ready(function() {
-                    //var product = myArray[0];
-                    //for (var i = 0; i < myArray.length; i = i + 1) {
-                    //  product = product * myArray[i];
-                    //}
-                    //$("body").append("<div>The product is " + product + "</div>");
+                    var sum = 0;
+                    $(document).ready(function() {
+                    var product = myArray[0];
+                    for (var i = 0; i < myArray.length; i = i + 1) {
+                     product = product * myArray[i];
+                    }
+                    $("body").append("<div>The product is " + product + "</div>");
                     //key value pairs, delimtied by comma (no comma on last key-value)
                     //use curly brackets
                     //not an array! so can't use array properties such as 'length'
                     var car = {
-                        //type: "SUV",
-                        //price: 45000,
-                      //  mileage: 24,
-                      //  color: "magenta",
-                        //fuelType: "electric",
-                        //src: "images/car1.jpg"
+                        type: "SUV",
+                        price: 45000,
+                        mileage: 24,
+                        color: "magenta",
+                        fuelType: "electric",
+                        src: "images/car1.jpg"
                     }
 
                     //how to loop through properties of an object?
