@@ -22,6 +22,16 @@
             max-height: 800px;
             min-height: 800px;
         }
+
+        #playerInfo img {
+            width: 200px;
+            float: left;
+        }
+
+        #playerInfo div {
+            padding-top: 100px;
+            padding-left: 350px;
+        }
     </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,6 +53,12 @@
             <div class="col-md-2 randomColor height2">
             </div>
             <div class="col-md-8 height2">
+                <div id="playerInfo">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/NHL_Logo_former.svg/996px-NHL_Logo_former.svg.png" alt="image">
+                    <div>
+                        NHL Rookie Scoring Leaders
+                    </div>
+                </div>
                 <table id="statsTable" class="table table-hover">
                     <tr>
                         <th>Rank</th>
@@ -102,7 +118,7 @@
                 var myHtml = ""
                 for (var i = 0; i < data.length; i++) {
                     console.log("i" + i + "name" + data[i].name);
-                    myHtml += "<tr>" +
+                    myHtml += "<tr data-index='" + i + "'>" +
                         "<td>" + (i + 1) + "</td>" + //rank
                         "<td>" + data[i].name + "</td>" +
                         "<td>" + data[i].team + "</td>" +
@@ -115,6 +131,12 @@
                 }
                 $(document).ready(function() {
                     $("#statsTable").append(myHtml);
+                    $("#statsTable").find("td").on("mouseover", function() {
+                        var index = $(this).closest("tr").attr("data-index");
+                        console.log("index :" + index);
+                        $("#playerInfo").find("img").attr("src",data[index].image);
+                        $("#playerInfo").find("div").html(data[index].details);
+                    })
                 })
             })
             .fail(function(data) {
