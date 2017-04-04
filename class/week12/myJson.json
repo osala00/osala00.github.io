@@ -1,0 +1,51 @@
+[{
+        "name": "Samsung Galaxy S7",
+        "cost": "100.00",
+        "colour": "black"
+    },
+    {
+        "name": "Iphone SE",
+        "cost": "0.00",
+        "colour": "white"
+    },
+    {
+        "name": "Pixel",
+        "cost": "899.00",
+        "colour": "white"
+    },
+    {
+        "name": "Acer Acer Liquid Zest 5 3G Smartphone",
+        "cost": "99.00",
+        "colour": "black"
+    },
+    {
+        "name": "Samsung Galaxy S6 Sm-g920",
+        "cost": "249.99",
+        "colour": "assorted"
+    },
+    {
+        "name": "Apple Iphone 5 GSM Smartphone",
+        "cost": "229.99",
+        "colour": "white"
+    },
+    {
+        "name": "Samsung Galaxy J7 Dual",
+        "cost": "204.62",
+        "colour": "rose gold"
+    },
+    {
+        "name": "Huawei P8 Lite Smartphone",
+        "cost": "259.98",
+        "colour": "black"
+    },
+    {
+        "name": "Polaroid 6 Android Smartphone",
+        "cost": "199.98",
+        "colour": "black"
+    },
+    {
+        "name": "Vertu Signature",
+        "cost": "36,520.00",
+        "colour": "black"
+    }
+]
